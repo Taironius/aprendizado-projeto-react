@@ -28,11 +28,12 @@ const ReposList = () => {
             
             {/* depois do arrow => abaixo tem parenteses ao inves de chaves pois tendo parenteses, nao é necessario oo return */}
             <ul>
-                {repos.map(repositorio => (  
-                    <li key={repositorio.id}>
-                        <b>Nome:</b> {repositorio.name}
-                        <b>Linguagem:</b> {repositorio.language}
-                        <a target="_blank" href={repositorio.html_url}>Visitar no GitHub</a>
+                {/* {repos.map(repositorio => ( */}
+                {repos.map(({id, name, language, html_url}) => (  
+                    <li key={id}>
+                        <b>Nome:</b> {name}
+                        <b>Linguagem:</b> {language}
+                        <a target="_blank" href={html_url}>Visitar no GitHub</a>
                     </li>
                 ))}
                 <li>Repositorio</li>
