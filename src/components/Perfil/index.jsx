@@ -9,8 +9,8 @@ const Perfil = (props) => {
     return (
         <div>
             {JSON.stringify(props)}
-            <img className="perfil-avatar" src={usuario.avatar} alt="" />
-            <h3 className='perfil-titulo'>{usuario.nome}</h3>
+            <img className="perfil-avatar" src={props.endereco} alt="" />
+            <h3 className='perfil-titulo'>{props.nome}</h3>
         </div>
     )
 }
