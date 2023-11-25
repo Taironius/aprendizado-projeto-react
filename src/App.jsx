@@ -1,5 +1,5 @@
 import Perfil from "./components/Perfil";
-
+import Formulario from "./components/Formulario";
 
 function App() { 
   const nome = 'kenedy';
@@ -18,6 +18,7 @@ function App() {
     <> 
 
       <Perfil nome="kenedy" endereco="https://github.com/Taironius.png"/>
+      <Formulario />
       <h1>ola, {nome}</h1>
       <h2>{retornaNome()}</h2>
       <h3>{pessoa.nome}</h3>
