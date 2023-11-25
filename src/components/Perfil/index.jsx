@@ -1,16 +1,13 @@
 import './perfil.css';
 
 const Perfil = (props) => {
-    const usuario = {
-        nome: 'kenedy jardim',
-        avatar: 'https://github.com/Taironius.png'
-    }
+    const {nome, endereco} = props;
 
     return (
         <div>
             {JSON.stringify(props)}
-            <img className="perfil-avatar" src={props.endereco} alt="" />
-            <h3 className='perfil-titulo'>{props.nome}</h3>
+            <img className="perfil-avatar" src={endereco} alt="" />
+            <h3 className='perfil-titulo'>{nome}</h3>
         </div>
     )
 }
