@@ -22,7 +22,7 @@ const Formulario = () => {
 
     return (
         <form>
-            <input type="number" placeholder="Nota da Materia A" onChange={evento => setMateriaA(parseInt(evento.target.value))} />
+            <input type="number" placeholder="Nota da Materia A" onChange={({target}) => setMateriaA(parseInt(target.value))} />
             <input type="number" placeholder="Nota da Materia B" onChange={evento => setMateriaB(parseInt(evento.target.value))} />
             <input type="number" placeholder="Nota da Materia C" onChange={evento => setMateriaC(parseInt(evento.target.value))}/>
             {/* <p>O aluno foi aprovado</p> */}
