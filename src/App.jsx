@@ -19,15 +19,25 @@ function App() {
 
   //AULA useEffect
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
+  //------
+  const [nomeUsuario, setNomeUsuario] = useState('');
 
 
 
   return (
     // O conteúdo deve estar dentro de tags como div, header, footer, ou tags mesmo que vazias
     <> 
+      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
 
-      <Perfil nome="kenedy" endereco="https://github.com/Taironius.png"/>
-      <ReposList />
+
+      {nomeUsuario.length > 4 && (
+        <>
+          <Perfil nomeUsuario={nomeUsuario}/>
+          <ReposList nomeUsuario={nomeUsuario} />
+        </>
+        
+        
+      )}
       
 
       {formularioEstaVisivel && (
